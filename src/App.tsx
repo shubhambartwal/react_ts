@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import { useState } from 'react';
+import AddNote from './components/add-note/AddNote';
+import Note from './components/note/Notes';
+import {Notes} from './components/note/data'
+import { NoteType } from './components/note/notes-type';
 function App() {
+  const [notes,setNotes]=useState(Notes)
+  const addNote=(note:NoteType)=>{
+    setNotes([note,...Notes])
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <h1> Note app</h1>
+     <AddNote addNote={addNote}/>
+    { notes.map((item)=>
+      <Note key={item.id} priority={item.priority} text={item.text}/>
+     )
+    }
+     
     </div>
   );
 }
