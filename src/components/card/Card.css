@@ -2,10 +2,16 @@
     border:1px solid grey ;
     padding :3rem;
     font-size :2rem;
-    color:#333;
+    
     height:5rem;
     border-radius: .5rem;
     background-color: #7e6c6c;
     margin: 1rem;
    
+}
+.card .ligh{
+    color:#333;
+}
+.card.dark{
+    color: rgb(20, 11, 11);
 }
