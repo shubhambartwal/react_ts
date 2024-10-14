@@ -11,7 +11,6 @@ function Home() {
   const [editMode, setEditMode] = useState(false)
   const [noteToBeEdited, setNoteToBeEdited] = useState<NoteType | null>(null)
   const theme=useContext(ThemeContext)
-  console.log(theme)
   const addNote = (note: NoteType) => {
     setNotes([note, ...Notes])
   }
