@@ -16,7 +16,7 @@ const App = () => {
     }
     return (
         <ThemeContext.Provider value={theme}>
-            <Switch onChange={handleChange} className='react-switch' checked={checked} />
+            <Switch onChange={handleChange} className='react_switch' checked={checked} />
             <Home />
         </ThemeContext.Provider>
 
